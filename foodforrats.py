@@ -32,11 +32,14 @@ n: 8
 
 • Output: 4"""
 
+
 def food(r,fc,arr,n):
     if n==0:
         return -1
     fn=r*fc
+    #fn-total food consumes by all rats
     hn=0
+    #hn-total houses need to consumes sufficient food for all rats
     for i in range(n):
         hn+=arr[i]
         if hn>fn:
